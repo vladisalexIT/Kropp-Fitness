@@ -230,6 +230,7 @@ svg * {
 
 :root {
     --color-dark: #000000;
+    --color-dark-alternate: #131619;
     --color-light: #ffffff;
     --color-dark-grey: #404040;
     --color-light-grey: #C4C4C4;
@@ -254,6 +255,7 @@ body {
     font-size: 16px;
     line-height: 1.75;
     font-weight: 300;
+    overflow-x: hidden;
     color: var(--color-light-grey);
 }
 
@@ -277,6 +279,19 @@ a:hover {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin-inline: auto;
     padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
 }
 
 h1,
@@ -315,6 +330,7 @@ h6 {
     align-items: center;
     column-gap: 20px;
     padding-inline: 32px;
+    background-color: var(--color-dark-alternate);
 }
 
 .header__logo {
@@ -342,7 +358,7 @@ h6 {
 .header__menu-link.is-current::after {
     content: '';
     width: 5px;
-    height: 5px;
+    aspect-ratio: 1;
     background-color: currentColor;
     border-radius: 50%;
 }
@@ -358,12 +374,12 @@ h6 {
     justify-content: center;
     row-gap: 4px;
     width: 40px;
-    height: 40px;
+    aspect-ratio: 1;
     padding-left: 8px;
     background-color: transparent;
     color: var(--color-light);
     border: var(--borer);
-    border-radius: var(--border-radius);
+    border-radius: 50%;
 }
 
 .header-burger-button-line {
@@ -376,6 +392,54 @@ h6 {
 .header-burger-button:hover {
     color: var(--color-light-grey);
     border-color: currentColor;
+}
+
+/* banner */
+.banner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--color-light);
+    background-color: var(--color-dark-alternate);
+}
+
+.swiper-slide {
+    padding: 36px 70px;
+    text-transform: uppercase;
+}
+
+.banner__info {
+    display: flex;
+    align-items: end;
+    font-size: clamp(16px, 1.56vw, 30px);
+    line-height: 1.27;
+    font-weight: 700;
+}
+
+.banner__info::before {
+    content: '';
+    width: min(10.1vw, 194px);
+    aspect-ratio: 1;
+    margin-right: 30px;
+    background: url(../icons/bold-arrow-down-right.svg) center/contain no-repeat;
+}
+
+.banner__title {
+    font-size: min(18.75vw, 360px);
+    line-height: 1;
+    padding-bottom: 7%;
+}
+
+.swiper-pagination-bullet {
+    border: 1px solid #fff;
+    opacity: 1;
+    position: relative;
+    z-index: 1000;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
 }
 
 
@@ -394,6 +458,10 @@ h6 {
 
     .header__menu-link {
         height: 50px;
+    }
+
+    .banner {
+        padding-inline: 15px;
     }
 }
 
