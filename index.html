@@ -180,7 +180,8 @@
                     Find us near you
                 </h2>
                 <div class="location__description">
-                    <p>Nec suas signiferumque id. An eum labore commodo principes. Usu diam noluisse cu, nam adipisci</p>
+                    <p>Nec suas signiferumque id. An eum labore commodo principes. Usu diam noluisse cu, nam adipisci
+                    </p>
                 </div>
                 <a href="/" class="location__button button button--transparent">view more</a>
             </div>
@@ -195,11 +196,88 @@
                 </div>
             </header>
             <div class="family__body container-wide">
-                <img src="./images/family/1.jpg" alt="Training people" width="414" height="479" class="family__image" loading="lazy">
-                <img src="./images/family/2.jpg" alt="Training people" width="744" height="479" class="family__image" loading="lazy">
-                <img src="./images/family/3.jpg" alt="Training people" width="396" height="479" class="family__image" loading="lazy">
-                <img src="./images/family/4.jpg" alt="Training people" width="396" height="479" class="family__image" loading="lazy">
-                <img src="./images/family/5.jpg" alt="Training people" width="414" height="479" class="family__image" loading="lazy">
+                <img src="./images/family/1.jpg" alt="Training people" width="414" height="479" class="family__image"
+                    loading="lazy">
+                <img src="./images/family/2.jpg" alt="Training people" width="744" height="479" class="family__image"
+                    loading="lazy">
+                <img src="./images/family/3.jpg" alt="Training people" width="396" height="479" class="family__image"
+                    loading="lazy">
+                <img src="./images/family/4.jpg" alt="Training people" width="396" height="479" class="family__image"
+                    loading="lazy">
+                <img src="./images/family/5.jpg" alt="Training people" width="414" height="479" class="family__image"
+                    loading="lazy">
+            </div>
+        </section>
+        <section class="calculate">
+            <div class="calculate__inner container">
+                <div class="calculate__body">
+                    <h2 class="calculate__title title-medium backdrop-title" data-title="bmi">
+                        Input your BMI
+                    </h2>
+                    <div class="calculate__description">
+                        <p>Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei</p>
+                    </div>
+                    <form class="calculate__form">
+                        <div class="calculate__form-body">
+                            <label for="height" class="visually-hidden">Height</label>
+                            <input type="number" id="height" placeholder="Height / cm" class="calculate__input input">
+
+                            <label for="weight" class="visually-hidden">Weight</label>
+                            <input type="number" id="weight" placeholder="Weight / kg" class="calculate__input input">
+
+                            <label for="age" class="visually-hidden">Age</label>
+                            <input type="number" id="age" placeholder="Age" class="calculate__input input">
+
+                            <label for="gender" class="visually-hidden">Gender</label>
+                            <select class="calculate__input input" id="gender" required>
+                                <option value="" disabled selected>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+
+                            <label for="activity-factor" class="visually-hidden">Activity factor</label>
+                            <select class="calculate__input input wide" id="activity-factor" required>
+                                <option value="" disabled selected>Select an activity factor:</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <button class="calculate__form-button button button--transparent">Calculate</button>
+                    </form>
+                </div>
+                <div class="calculate__table-wrapper">
+                    <table class="calculate__table">
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"><b>BMR</b> Metabolic Rate / <b>BMI</b> Body Mass Index</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         </section>
 </body>
